@@ -1,14 +1,17 @@
 # Собираем информацию: имя, возраст, вес, рост
-user_name = input("Добро пожаловать в FitLife! Пожалуйста, введите своё имя: ")
+user_name = input("Добро пожаловать в FitLife! ")
+user_name += input("Пожалуйста, введите своё имя: ")
 user_name = user_name.title()
 
 user_age = input("Сколько Вам полных лет? ")
 int_user_age = int(user_age)
 
-user_weight = input("Укажите свой ВЕС в кг, используя точку (Пример: 68.7) ")
+user_weight = input("Укажите свой ВЕС в кг, используя точку ")
+user_weight += input("(Пример: 68.7) Ваш ответ: ")
 float_user_weight = float(user_weight)
 
-user_height = input("Укажите свой РОСТ в метрах, используя точку (Пример: 1.77) ")
+user_height = input("Укажите свой РОСТ в метрах, используя точку ")
+user_height += input("(Пример: 1.77) Ваш ответ: ")
 float_user_height = float(user_height)
 
 # Подсчет ИМТ:
