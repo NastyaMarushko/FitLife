@@ -12,19 +12,19 @@ while True:
 
 
 while True:
-    user_weight = input("Укажите свой вес в кг, используя точку")
+    user_weight = input("Укажите свой вес в кг (69.9) ")
     try:
         float_user_weight = float(user_weight)
         break
     except ValueError:
-        print("Пример: 71.3")
+        print("Используйте точку. Пример: 71.3")
 
 while True:
     user_height = input("Укажите свой рост в метрах (1.77): ")
     try:
         float_user_height = float(user_height)
         if float_user_height <= 0:
-            print("Рост должен быть положительным числом.")
+            print("Рост должен быть положительным числом")
             continue
         break
     except ValueError:
@@ -49,6 +49,6 @@ print(f"Твой вес(в кг.): {float_user_weight}")
 print(f"Твой рост(в м.): {float_user_height}")
 print("-" * 62)
 print(f"На основе этих показателей твой ИМТ равен: {round_bmi}")
-print(f"Твоя норма воды в день: {round_water_needed} л.")
+print(f"Твоя норма воды в день: {round_water_needed}")
 print()
 print("Расчет окончен. Будьте здоровы!")
