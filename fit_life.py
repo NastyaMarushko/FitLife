@@ -8,19 +8,19 @@ while True:
         int_user_age = int(user_age)
         break
     except ValueError:
-        print("Пожалуйста, введите корректное целое число для возраста.")
+        print("Пожалуйста, введите целое число")
 
 
 while True:
-    user_weight = input("Укажите свой вес в кг, используя точку (Пример: 68.7): ")
+    user_weight = input("Укажите свой вес в кг, используя точку")
     try:
         float_user_weight = float(user_weight)
         break
     except ValueError:
-        print("Пожалуйста, введите корректный вес (число с точкой, например, 71.3).")
+        print("Пример: 71.3")
 
 while True:
-    user_height = input("Укажите свой рост в метрах, используя точку (Пример: 1.77): ")
+    user_height = input("Укажите свой рост в метрах (1.77): ")
     try:
         float_user_height = float(user_height)
         if float_user_height <= 0:
@@ -28,7 +28,7 @@ while True:
             continue
         break
     except ValueError:
-        print("Пожалуйста, введите корректный рост (число с точкой, например, 1.69).")
+        print("Введите число с точкой (прим. 1.69)")
 
 # Подсчет ИМТ:
 bmi = float_user_weight / (float_user_height**2)
