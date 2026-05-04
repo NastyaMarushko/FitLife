@@ -1,3 +1,8 @@
+WATER_PER_KG_ML = 30
+WATER_ML_PER_L = 1000
+SEPARATING_LINE_ONE = "-" * 62
+SEPARATING_LINE_TWO = "=" * 62
+
 # Собираем информацию: имя, возраст, вес, рост
 user_name = input("Добро пожаловать! Как Вас зовут? ")
 user_name = user_name.title()
@@ -15,6 +20,9 @@ while True:
     user_weight = input("Укажите свой вес в кг (69.9) ")
     try:
         float_user_weight = float(user_weight)
+        if float_user_weight < 0:
+            print("Обратите внимание - вес не может быть отрицательным")
+            continue
         break
     except ValueError:
         print("Используйте точку. Пример: 71.3")
@@ -35,19 +43,18 @@ bmi = float_user_weight / (float_user_height**2)
 round_bmi = round(bmi, 1)
 
 # Подсчет воды:
-water_per_kg_ml = 30
-water_per_kg_l = water_per_kg_ml / 1000
+water_per_kg_l = WATER_PER_KG_ML / WATER_ML_PER_L
 water_needed = float_user_weight * water_per_kg_l
 round_water_needed = round(water_needed, 1)
 
 # Вывод  результата:
-print("=" * 62)
+print(SEPARATING_LINE_TWO)
 print(f"Привет, {user_name}!")
 print()
 print(f"Твой полный возраст: {int_user_age}")
 print(f"Твой вес(в кг.): {float_user_weight}")
 print(f"Твой рост(в м.): {float_user_height}")
-print("-" * 62)
+print(SEPARATING_LINE_ONE)
 print(f"На основе этих показателей твой ИМТ равен: {round_bmi}")
 print(f"Твоя норма воды в день: {round_water_needed}")
 print()
